@@ -1,3 +1,7 @@
+
+
+
+
 //Redondeando el precio a mostrar a dos cifras decimales
 function formatDecimal(val, n) {
     n = n || 2;
@@ -67,3 +71,47 @@ function updateComboTotal(form) {
     form.elements['combo_total'].value = formatDecimal(parseFloat(getRadioVal(form, 'combo')));
     updateComboTotal(form);
    })();
+
+
+
+   //Funciones que realizan los procesos matematicos
+function comboOne(){
+	var cantidad = document.getElementById('cantidad');
+	var pago
+
+	pago = 7.25 * cantidad;
+	Math.round(pago);
+
+	return pago
+}
+
+function comboTwo(){
+	var cantidad = document.getElementById('cantidad');
+	var pago
+
+	pago = 5.75 * cantidad;
+	Math.round(pago);
+
+	return pago
+}
+
+function comboThree(){
+	var cantidad = document.getElementById('cantidad');
+	var pago
+
+	pago = 3.50 * cantidad;
+	Math.round(pago);
+
+	return pago
+}
+
+
+//Eventos a realizar tras la petición del combo
+const $comboUno = document.getElementById('combouno');
+$comboUno.addEventListener("sumbit",comboOne);
+
+const $comboDos = document.getElementById('combodos');
+$comboDos.addEventListener("sumbit",comboTwo);
+
+const $comboTres = document.getElementById('combotres');
+$comboTres.addEventListener("sumbit",comboThree);
