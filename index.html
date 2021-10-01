@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <!-- FLEX --> 
+    <section class="flex">
+        <div><h1 class="titulo">Combos</h1></div>
+        <div class="flex-container">           
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <h1 class="titulo">Restaurante de San Salvador</h1>
+        <div class="flex-container">
+            <div>
+                <form action="javascript:void(0);" class="formulario" id="menuform">
+                    <fieldset>
+                        <legend>Combos y acompañantes</legend>
+                        <p>Combos:
+                            <label><input type="radio" name="combo" value="7.25" checked="checked" />Super combo</label>
+                            <label><input type="radio" name="combo" value="5.75" />Combo especial</label>
+                            <label><input type="radio" name="combo" value="3.50" />Combo infantil</label>
+                            <input type="hidden" name="combo_total" value="0.00" />
+                        </p>
+                        <p id="Productos"><label> Otros productos:</label>
+                            <label><input type="checkbox" name="ensalada" value="1.50" />Ensalada</label>
+                            <label><input type="checkbox" name="papas" value="1.25" />Papa frita</label>
+                            <label><input type="checkbox" name="PolloGrande" value="1.75" />Piez de pollo grande</label>
+                            <label><input type="checkbox" name="PolloMediano" value="1.50" />Pieza de pollo mediana</label>
+                            <label><input type="checkbox" name="PolloPequeño" value="1.25" />Pieza de pollo Pequeña</label>
+                            <label><input type="checkbox" name="BedbidaGrande" value="1.50" />Bebida grande</label>
+                            <label><input type="checkbox" name="BedbidaMediana" value="1.25" />Bebida mediana</label>
+                            <label><input type="checkbox" name="BedbidaPequeña" value="1.00" />Bebida pequeña</label>
+                            <label><input type="checkbox" name="cafe" value="0.50" />Café</label>
+                            <label><input type="checkbox" name="postre" value="1.25" />Postre</label>
+                            <input type="hidden" name="acomp_total" value="0.00" />
+                        </p>
+                        <p>
+                            <label>
+                                Total: $<input type="text" name="total" class="num" value="0.00" readonly="readonly" />
+                            </label>
+                        </p>
+                        <p>
+                            <input type="submit" name="submit" value="Submit" />
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/restaurante.js" async defer></script>
+</body>
+
+</html>
